@@ -63,4 +63,7 @@ $s = useSomeMemory($s);
 $s = useSomeMemory($s);
 $s = useSomeMemory($s);
 $s = useSomeMemory($s);
+$s = useSomeMemory($s);
+$s = useSomeMemory($s);
+$s = useSomeMemory($s);
 logMemoryUsage("после нескольких функций со строкой");
