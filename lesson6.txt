@@ -1,0 +1,36 @@
+1. Конфиги nginx https://prnt.sc/stbux8
+Скрины работы кода на разных нодах
+https://prnt.sc/stbw0d
+https://prnt.sc/stbwgb
+2. Код на нодах:
+
+**node1
+
+<p>node1</p>
+<?php
+    ini_set('session.save_handler', 'memcached');
+    ini_set('session.save_path', 'localhost:11211');
+    session_start();
+    echo $_SESSION['node'];
+    $_SESSION['node'] = "last session record from node1 <br>";
+    phpinfo();
+ ?>
+
+**node2
+
+<p>node2</p>
+<?php
+    ini_set('session.save_handler', 'memcached');
+    ini_set('session.save_path', '172.29.0.247:11211');
+    session_start();
+    echo $_SESSION['node'];
+    $_SESSION['node'] = "last session record from node2 <br>";
+    phpinfo();
+?>
+
+
+
+скрины работы сессии на нодах выше.
+
+3. Не очень понял смысла задания, создал классическую схему с папками sites-avaible sites-enabled куда кладут сылку из первой папки. https://prnt.sc/stc004
+скрин на конфиг с инклудом в п.1
